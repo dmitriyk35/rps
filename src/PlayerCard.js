@@ -9,9 +9,9 @@ const PlayerCard = (props) => {
   var sign = props.sign;
   var image = ""
 
-  if (sign == "rock") {
+  if (sign === "rock") {
     image = rock;
-  } else if (sign == "paper") {
+  } else if (sign === "paper") {
     image = paper;
   } else {
     image = scissors
@@ -20,7 +20,7 @@ const PlayerCard = (props) => {
 
   return (
     <div className="player-card">
-      <img src={image}/>
+      <img src={image} alt="Rock, Paper or Scissor"/>
     </div>
   )
 };
