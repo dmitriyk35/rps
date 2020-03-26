@@ -14,8 +14,26 @@ class Game extends Component {
 
   playGame = () => {
     this.setState({
-      playerOne: this.signs[Math.floor(Math.random() * 3)],
+      // playerOne: this.signs[1],
       playerTwo: this.signs[Math.floor(Math.random() * 3)],
+    })
+  };
+
+  playScissors = () => {
+    this.setState({
+      playerOne: this.signs[1],
+    })
+  };
+
+  playRock = () => {
+    this.setState({
+      playerOne: this.signs[0],
+    })
+  };
+
+  playPaper = () => {
+    this.setState({
+      playerOne: this.signs[2],
     })
   };
 
@@ -27,9 +45,9 @@ class Game extends Component {
         return "It's a Tie";
     }
     else if ((playerOne === "rock" && playerTwo === "scissors") || (playerOne === "paper" && playerTwo === "rock") || (playerOne === "scissors" && playerTwo === "paper")) {
-      return "Player 1 Wins!";
+      return "Dan Wins!";
     } else {
-      return "Player 2 Wins!";
+      return "John Wins!";
     }
   };
 
@@ -41,6 +59,17 @@ class Game extends Component {
           <PlayerCard sign={this.state.playerOne} />
           <PlayerCard sign={this.state.playerTwo} />
         </div>
+        <div className="shapesChoice">
+        <button type="button" className="button2" onClick={this.playScissors}>Scissor</button>
+        <button type="button" className="button2" onClick={this.playRock}>Rock</button>
+        <button type="button" className="button2" onClick={this.playPaper}>Paper</button>
+        </div>
+        <div className="playernames">
+
+          <span className="playername1">Player: Dan</span>
+          <span className="playername2"> Player: John</span>
+        </div>
+
         <div className="winner">{this.decideWinner()} </div>
         <button type="button" onClick={this.playGame}>Play Game</button>
       </div>
