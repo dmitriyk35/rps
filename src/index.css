@@ -26,6 +26,43 @@ body {
   transform: rotate(180deg);
 }
 
+.playernames {
+  width: 200px;
+  height: 155px;
+  display: block;
+  margin: 0 auto;
+}
+
+.playername1 {
+  width: 90px;
+  height: 55px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  right: 60%;
+}
+
+.playername2 {
+  width: 90px;
+  height: 55px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  left: 60%;
+  bottom: 35%;
+}
+
+.shapesChoice {
+  float: left;
+}
+
+.button2 {
+  width: 100px;
+  height: 30px;
+  display: block;
+  margin: 0 auto;
+}
+
 .winner {
   width: 100px;
   height: 55px;
